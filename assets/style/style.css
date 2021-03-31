@@ -65,8 +65,12 @@
     opacity: 0.5;
 }
 
-.section-name {
+.vertical-section-name .side-section-name {
     transform: translate(30px, 15px);
+}
+
+.section-name h1 {
+    font-size: 34px;
 }
 
 /*******************************************************************************
@@ -80,26 +84,28 @@
     overflow: hidden;
 }
 
-.content-left {
+.home-container .content-left {
     width: 45%;
     height: 100vh;
     z-index: 3;
 }
 
-.content-right {
+.home-container .content-right {
     width: 55%;
     height: 100vh;
     z-index: 1;
 }
-.overlay{
+
+.home-container .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.095);
+    background-color: rgba(0, 0, 0, 0.05);
     z-index: 2;
 }
+
 .logo {
     padding: 20px 15%;
 }
@@ -108,7 +114,7 @@
     font-size: 32px;
 }
 
-.details {
+.home-container .details {
     padding-top: 40%;
     padding-left: 15%;
 }
@@ -130,10 +136,6 @@
     height: 120px;
     width: 120px;
     overflow: hidden;
-    /* perspective: 1000px;
-    transition: all .3s ease-in-out;
-    animation: rotateSlowSemi alternate-reverse infinite;
-    animation-duration: 12s; */
 }
 
 .empty-blob-image-container {
@@ -146,42 +148,23 @@
     width: 120px;
 }
 
-.transform-position {
+.scale-rotate {
     perspective: 1000px;
-    /* transition: all .3s ease-in-out; */
-    animation: transformPosition linear infinite;
-    animation-duration: 15s;
+    animation: scaleRotate linear infinite;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.round-a-object {
+    perspective: 1000px;
+    animation: roundAObject linear infinite;
+    animation-duration: 2s;
     animation-delay: 5s;
 }
 
-.rotate-delay-2 {
+.round-a-object-spl {
     perspective: 1000px;
-    /* transition: all .3s ease-in-out; */
-    animation: rotateSlowSemi linear infinite;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-.vertical-mover {
-    perspective: 1000px;
-    /* transition: all .3s ease-in-out; */
-    animation: verticalMover linear infinite;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-.vertical-mover-delayed {
-    perspective: 1000px;
-    /* transition: all .3s ease-in-out; */
-    animation: verticalMover linear infinite;
-    animation-duration: 7s;
-    animation-delay: 14s;
-}
-
-.shift-left {
-    perspective: 1000px;
-    /* transition: all .3s ease-in-out; */
-    animation: shiftLeftRound linear infinite;
+    animation: roundAObjectSpl linear infinite;
     animation-duration: 2s;
     animation-delay: 5s;
 }
@@ -189,18 +172,20 @@
 .rotate-me {
     perspective: 1000px;
     animation: rotateMe linear infinite;
-    animation-duration: 8s;
+    animation-duration: 9s;
     animation-delay: 9s;
 }
 
 .rotate-me-right {
     perspective: 1000px;
     animation: rotateMeRight linear infinite;
-    animation-duration: 8s;
-    animation-delay: 9s;
+    animation-duration: 14s;
+    animation-delay: 5s;
 }
-
-@keyframes rotateSlowSemi {
+.delay-animation-15{
+    animation-delay: 15s;
+}
+/* @keyframes scaleRotate {
     0% {
         transform: rotate(0deg) scale(1);
     }
@@ -238,86 +223,17 @@
     }
 }
 
-@keyframes transformPosition {
-    0% {
-        transform: rotate(0deg);
-        border-radius: 0%;
-    }
-
-    25% {
-        transform: translateX(240px) scale(0.8);
-        border-radius: 50%;
-    }
-
-    35% {
-        transform: translateX(120px) scale(0.3);
-        border-radius: 100%;
-    }
-
-    60% {
-        transform: translate(120px, 120px) scale(0.6);
-        border-radius: 100%;
-    }
-
-    70% {
-        transform: translateX(120px) scale(0.8);
-        border-radius: 40%;
-    }
-
-    80% {
-        transform: translateX(120px) scale(1);
-        border-radius: 20%;
-    }
-
-    81% {
-        transform: translateX(50px);
-        border-radius: 0%;
-
-    }
-
-    90% {
-        transform: translateX(0);
-        border-radius: 0%;
-
-    }
-
-    100% {
-        transform: translateX(0);
-        border-radius: 0%;
-    }
-}
-
-@keyframes verticalMover {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: translateY(120px);
-    }
-
-    50% {
-        transform: translateY(120px);
-    }
-
-    75% {
-        transform: translateY(120px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes shiftLeftRound {
+@keyframes roundAObject {
     0% {
         transform: rotate(0deg) scale(1);
         border-radius: 0%;
     }
+
     10% {
         transform: rotate(0deg) scale(1);
         border-radius: 0%;
     }
+
     15% {
         transform: rotate(0deg) scale(1);
         border-radius: 20%;
@@ -342,16 +258,64 @@
         transform: rotate(0deg) scale(1);
         border-radius: 20%;
     }
+
     90% {
         transform: rotate(0deg) scale(1);
         border-radius: 0%;
     }
+
     100% {
         transform: rotate(0deg) scale(1);
         border-radius: 0%;
     }
 }
 
+@keyframes roundAObjectSpl {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0%;
+    }
+
+    10% {
+        transform: rotate(-180deg) scale(0.8);
+        border-radius: 50%;
+    }
+
+    15% {
+        transform: rotate(-270deg) scale(0.6);
+        border-radius: 100%;
+    }
+
+    25% {
+        transform: rotate(-320deg) scale(0.6);
+        border-radius: 100%;
+    }
+
+    50% {
+        transform: rotate(-90deg) scale(0.09);
+        border-radius: 50%;
+    }
+
+    75% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0%;
+    }
+
+    80% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0%;
+    }
+
+    90% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0%;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0%;
+    }
+}
 @keyframes rotateMe {
     0% {
         transform: rotate(0deg)
@@ -395,42 +359,155 @@
         transform: rotate(0deg)
     }
 
-    15% {
-        transform: rotate(0deg)
-    }
-
-    25% {
+    20% {
         transform: rotate(90deg)
     }
 
-    35% {
-        transform: rotate(90deg);
+    30% {
+        transform: rotate(90deg)
     }
 
-    45% {
-        transform: rotate(90deg);
+    40% {
+        transform: rotate(180deg)
     }
 
     50% {
-        transform: rotate(90deg)
+        transform: rotate(180deg)
     }
 
-    75% {
-        transform: rotate(0deg)
+    60% {
+        transform: rotate(270deg);
+    }
+
+    70% {
+        transform: rotate(270deg);
     }
 
     80% {
-        transform: rotate(0deg)
+        transform: rotate(360deg)
+    }
+
+    90% {
+        transform: rotate(360deg);
     }
 
     100% {
-        transform: rotate(0deg)
+        transform: rotate(360deg)
+    }
+} */
+
+/*******************************************************************************
+                                 HOME CSS
+*******************************************************************************/
+.about-container {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.about-container .content-container {
+    display: flex;
+    height: 100%;
+}
+
+.about-container .content-left {
+    width: 50%;
+    height: 100%;
+}
+
+.content-left a {
+    text-decoration: none;
+}
+
+.content-left .personal-statement {
+    font-size: 16px;
+}
+
+.about-container .content-right {
+    width: 50%;
+    height: 100%;
+}
+
+.about-container .content-right .image-container {
+    position: relative;
+}
+
+.about-container .large-img img {
+    width: 390px;
+    transform: translate(150px, 20px);
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    z-index: 1;
+}
+
+.about-container .medium-img img {
+    width: 370px;
+    transform: translate(160px, -365px);
+    position: absolute;
+    top: 25px;
+    left: 160px;
+    z-index: 2;
+}
+
+.about-container .small-img img {
+    width: 350px;
+    transform: translate(170px, -730px);
+    position: absolute;
+    top: 35px;
+    left: 170px;
+    z-index: 3;
+}
+
+.about-container .personal-img img {
+    width: 250px;
+    transform: translate(50px, 50px);
+    position: absolute;
+    top: 35px;
+    left: 170px;
+    z-index: 4;
+}
+
+.round-me {
+    perspective: 1000px;
+    /* transition: all .3s ease-in-out; */
+    animation: roundMeSlow infinite alternate;
+    animation-duration: 7s;
+}
+
+.round-me-fast {
+    perspective: 1000px;
+    /* transition: all .3s ease-in-out; */
+    animation: roundMeFast infinite alternate;
+    animation-duration: 7s;
+}
+
+@keyframes roundMeSlow {
+    0% {
+        transform: rotate(110deg) scale(0.95)
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: rotate(270deg) scale(1)
+    }
+}
+
+@keyframes roundMeFast {
+    0% {
+        transform: rotate(40deg) scale(1.05)
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1)
     }
 }
 
 /**********************************************
             TYPER CUSTOMIZATION
 **********************************************/
-.typed-cursor{
+.typed-cursor {
     color: var(--grey);
 }
