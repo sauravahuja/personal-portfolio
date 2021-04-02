@@ -65,10 +65,6 @@
     opacity: 0.5;
 }
 
-.vertical-section-name .side-section-name {
-    transform: translate(30px, 15px);
-}
-
 .section-name h1 {
     font-size: 34px;
 }
@@ -76,6 +72,37 @@
 /*******************************************************************************
                                  HOME CSS
 *******************************************************************************/
+.home-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.home-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.home-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.home-container .vertical-section-name .home-section-name {
+    transform: translate(30px, 15px);
+}
+
 .home-container {
     position: relative;
     display: flex;
@@ -182,9 +209,11 @@
     animation-duration: 14s;
     animation-delay: 5s;
 }
-.delay-animation-15{
+
+.delay-animation-15 {
     animation-delay: 15s;
 }
+
 /* @keyframes scaleRotate {
     0% {
         transform: rotate(0deg) scale(1);
@@ -397,11 +426,43 @@
 } */
 
 /*******************************************************************************
-                                 HOME CSS
+                                 ABOUT CSS
 *******************************************************************************/
+
+.about-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.about-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.about-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.about-container .vertical-section-name .about-section-name {
+    transform: translate(30px, 15px);
+}
+
 .about-container {
     height: 100vh;
-    /* overflow: hidden; */
+    position: relative;
 }
 
 .about-container .content-container {
@@ -505,6 +566,74 @@
     }
 }
 
+/*******************************************************************************
+                                 SKILLS CSS
+*******************************************************************************/
+.skill-container {
+    position: relative;
+    height: 100vh;
+}
+
+.skill-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.skill-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.skill-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.skill-container .vertical-section-name .about-section-name {
+    transform: translate(30px, 15px);
+}
+
+.skills-content {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.language-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.languages,
+.designing-skills,
+.soft-skills {
+    width: 380px;
+    height: 380px;
+    margin: 25px;
+    background:#e3e3e3;
+    border-radius: 10px;
+    padding: 50px 30px;
+    transform-style: preserve-3d;
+}
+
+.languages p,
+.designing-skills p,
+.soft-skills p {
+    padding-top: 10px;
+    font-weight: 500;
+    transform: translateZ(20px);
+}
 /**********************************************
             TYPER CUSTOMIZATION
 **********************************************/

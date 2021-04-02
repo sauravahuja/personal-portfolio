@@ -9,3 +9,19 @@ var typed = new Typed("#typer", {
     smartBackspace: true,
     loop: true
 });
+
+$('.languages').tilt({
+    glare: true,
+    maxGlare: .6,
+    // axis: 'x'
+})
+$('.designing-skills').tilt({
+    glare: true,
+    maxGlare: .6,
+    // axis: 'x'
+})
+$('.soft-skills').tilt({
+    glare: true,
+    maxGlare: .6,
+    // axis: 'x'
+})

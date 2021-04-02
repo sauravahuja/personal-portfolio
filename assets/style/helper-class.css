@@ -18,7 +18,9 @@
 .text-center {
     text-align: center !important;
 }
-
+.text-capitalize{
+    text-transform: capitalize !important;
+}
 .parallax {
     background-attachment: fixed !important;
     background-position: center !important;
