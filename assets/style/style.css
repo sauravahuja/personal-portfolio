@@ -832,24 +832,141 @@ body {
     font-size: 20px;
 }
 
-/**********************************************
-            TYPER CUSTOMIZATION
-**********************************************/
-.typed-cursor {
+/*******************************************************************************
+                                 REVIEW CSS
+*******************************************************************************/
+
+.contact-container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--offWhite);
+}
+
+.contact-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.contact-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.contact-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.contact-container .vertical-section-name .project-section-name {
+    transform: translate(30px, 15px);
+}
+
+.contact-box {
+    display: flex;
+}
+
+.contact-box .contact-detail-container {
+    display: flex;
+}
+
+.location-contact-details,
+.form-contact-details {
+    background: #F5F5F5;
+    padding: 70px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.contact-container .contact-detail-container div {
+    background-color: #EAF6E9;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+.detail-title {
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.form-contact-details {
+    width: 100%;
+}
+
+.form-contact-details input {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+}
+
+.form-contact-details textarea {
+    width: 100%;
+    padding: 5px;
+    resize: none
+}
+
+.form-contact-details input::placeholder,
+.form-contact-details textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.form-contact-details input:focus {
+    outline: none !important;
+    border-color: var(--orange);
+}
+
+.form-contact-details textarea {
+    outline-color: var(--orange);
+}
+
+.form-contact-details input[type="submit"] {
+    outline: none !important;
+    border-color: var(--offWhite);
+    background: var(--orange);
+    color: var(--offWhite);
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.form-contact-details input[type="submit"]:hover {
+    border-color: var(--orange);
+    background: transparent;
     color: var(--grey);
 }
 
 /**********************************************
             TYPER CUSTOMIZATION
 **********************************************/
+.typed-cursor {
+    color: var(--grey);
+    border-style: unset;
+}
 
-.slick-prev:before, .slick-next:before{
+/**********************************************
+            TYPER CUSTOMIZATION
+**********************************************/
+
+.slick-prev:before,
+.slick-next:before {
     display: none;
 }
 
 #review-slick .slick-next,
-#review-slick .slick-prev
- {
+#review-slick .slick-prev {
     all: unset;
     cursor: pointer;
     font-size: 24px;
@@ -859,12 +976,14 @@ body {
     text-align: center;
     color: var(--grey);
 }
-#review-slick .slick-next{
+
+#review-slick .slick-next {
     position: absolute;
     top: 250px;
     left: 50%;
 }
-#review-slick .slick-prev{
+
+#review-slick .slick-prev {
     position: absolute;
     top: 250px;
     left: 44%;
