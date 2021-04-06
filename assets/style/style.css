@@ -853,11 +853,11 @@ body {
     all: unset;
     cursor: pointer;
     font-size: 24px;
-    border: 2px solid #613842;
+    border: 2px solid var(--grey);
     padding: 14px 24px;
     border-radius: 50%;
     text-align: center;
-    color: #613842;
+    color: var(--grey);
 }
 #review-slick .slick-next{
     position: absolute;
