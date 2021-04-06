@@ -107,6 +107,7 @@
     position: relative;
     display: flex;
     height: 100vh;
+    width: 100%;
     background: #FFFFFF;
     overflow: hidden;
 }
@@ -133,11 +134,11 @@
     z-index: 2;
 }
 
-.logo {
+.home-container .logo {
     padding: 20px 15%;
 }
 
-.logo h2 {
+.home-container .logo h2 {
     font-size: 32px;
 }
 
@@ -425,6 +426,11 @@
     }
 } */
 
+.blank-container {
+    height: 100vh;
+    width: 100%;
+}
+
 /*******************************************************************************
                                  ABOUT CSS
 *******************************************************************************/
@@ -463,6 +469,7 @@
 .about-container {
     height: 100vh;
     position: relative;
+    background-color: var(--offWhite);
 }
 
 .about-container .content-container {
@@ -572,6 +579,7 @@
 .skill-container {
     position: relative;
     height: 100vh;
+    background-color: var(--offWhite);
 }
 
 .skill-container .vertical-section-name {
@@ -601,7 +609,7 @@
     opacity: 0.5;
 }
 
-.skill-container .vertical-section-name .about-section-name {
+.skill-container .vertical-section-name .skill-section-name {
     transform: translate(30px, 15px);
 }
 
@@ -621,7 +629,7 @@
     width: 380px;
     height: 380px;
     margin: 25px;
-    background:#e3e3e3;
+    background: #e3e3e3;
     border-radius: 10px;
     padding: 50px 30px;
     transform-style: preserve-3d;
@@ -634,6 +642,113 @@
     font-weight: 500;
     transform: translateZ(20px);
 }
+
+/*******************************************************************************
+                                 PROJECT CSS
+*******************************************************************************/
+.project-container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--offWhite);
+}
+
+.project-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.project-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.project-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.project-container .vertical-section-name .project-section-name {
+    transform: translate(30px, 15px);
+}
+
+.project-row {
+    display: flex;
+}
+
+.project-box {
+    height: 350px;
+    width: 50%;
+    margin: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-box:hover .hover-content {
+    transform: translateY(-60px);
+}
+
+.project-box img {
+    height: 350px;
+    width: 100%;
+}
+
+.hover-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.project-type {
+    transform: rotate(-90deg) translate(410px, 170px);
+    transition: all .3s ease-in-out;
+}
+
+.project-type h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.project-box:hover .project-type {
+    transform: translateY(-60px);
+}
+
+.project-links {
+    text-align: center;
+}
+
+.project-links i {
+    padding: 7px;
+    color: #FEFEFE;
+}
+.project-links a {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+.project-links a:hover {
+    color: var(--orange);
+}
+
+.project-links a span {
+    margin: 5px;
+}
+.project-links i:hover {
+    background: var(--orange);
+    border-radius: 5px;
+}
+
 /**********************************************
             TYPER CUSTOMIZATION
 **********************************************/
