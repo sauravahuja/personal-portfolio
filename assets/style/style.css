@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'montserrat', 'sans-serif';
 }
 
@@ -648,7 +651,6 @@
 *******************************************************************************/
 .project-container {
     position: relative;
-    height: 100vh;
     background-color: var(--offWhite);
 }
 
@@ -733,10 +735,12 @@
     padding: 7px;
     color: #FEFEFE;
 }
+
 .project-links a {
     text-decoration: none;
     color: #FEFEFE;
 }
+
 .project-links a:hover {
     color: var(--orange);
 }
@@ -744,9 +748,88 @@
 .project-links a span {
     margin: 5px;
 }
+
 .project-links i:hover {
     background: var(--orange);
     border-radius: 5px;
+}
+
+/*******************************************************************************
+                                 REVIEW CSS
+*******************************************************************************/
+
+.testimonial-container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--offWhite);
+}
+
+.testimonial-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.testimonial-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.testimonial-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.testimonial-container .vertical-section-name .project-section-name {
+    transform: translate(30px, 15px);
+}
+
+.review-box {
+    font-family: 'Crimson Text', serif;
+    padding: 0 200px;
+}
+
+.review-slick {
+    position: relative;
+}
+
+.review-box p {
+    font-size: 18px;
+}
+
+.review-box span {
+    font-size: 18px;
+    padding: 5px;
+    color: #FFD700;
+}
+
+.review-quote {
+    height: 80px;
+    width: 80px;
+}
+
+.reviewer-name::before {
+    content: '';
+    display: inline-block;
+    border: 0.5px solid grey;
+    width: 50px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.reviewer-name {
+    font-size: 20px;
 }
 
 /**********************************************
@@ -754,4 +837,35 @@
 **********************************************/
 .typed-cursor {
     color: var(--grey);
+}
+
+/**********************************************
+            TYPER CUSTOMIZATION
+**********************************************/
+
+.slick-prev:before, .slick-next:before{
+    display: none;
+}
+
+#review-slick .slick-next,
+#review-slick .slick-prev
+ {
+    all: unset;
+    cursor: pointer;
+    font-size: 24px;
+    border: 2px solid #613842;
+    padding: 14px 24px;
+    border-radius: 50%;
+    text-align: center;
+    color: #613842;
+}
+#review-slick .slick-next{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+}
+#review-slick .slick-prev{
+    position: absolute;
+    top: 250px;
+    left: 44%;
 }

@@ -47,20 +47,20 @@
 **************************************************************************************************************************/
 .l-dash {
     display: inline-block;
-    padding: 1px 180px;
-    background: #fefefe;
+    padding: 0.5px 180px;
+    background: #42a07f;
 }
 
 .m-dash {
     display: inline-block;
-    padding: 2px 70px;
-    background: #fefefe;
+    padding: 0.5px 70px;
+    background: #42a07f;
 }
 
 .s-dash {
     display: inline-block;
-    padding: 2px 30px;
-    background: #fefefe;
+    padding: 0.5px 30px;
+    background: #42a07f;
 }
 
 /**************************************************************************************************************************
