@@ -107,7 +107,7 @@ body {
 }
 
 .home-container {
-    position: relative;
+    position: fixed;
     display: flex;
     height: 100vh;
     width: 100%;
@@ -149,7 +149,21 @@ body {
     padding-top: 40%;
     padding-left: 15%;
 }
-
+.home-container .social-links{
+    display: inline-flex;
+    padding: 10px 20px;
+    background: rgba(66, 160, 127, 0.1);
+    border-radius: 50px;
+}
+.home-container .social-links a{
+    padding: 0 7px;
+    color: var(--grey);
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.home-container .social-links a:hover{
+    color: #d66053;
+}
 .greeting {
     font-size: 32px;
     font-weight: 400;
@@ -833,7 +847,7 @@ body {
 }
 
 /*******************************************************************************
-                                 REVIEW CSS
+                                CONTACT CSS
 *******************************************************************************/
 
 .contact-container {
@@ -946,6 +960,135 @@ body {
     border-color: var(--orange);
     background: transparent;
     color: var(--grey);
+}
+
+.contact-container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--offWhite);
+}
+
+.contact-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 150px;
+    left: -40px;
+}
+
+.contact-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.contact-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--orange);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.contact-container .vertical-section-name .project-section-name {
+    transform: translate(30px, 15px);
+}
+
+/*******************************************************************************
+                                CONTACT CSS
+*******************************************************************************/
+
+.social-container {
+    position: relative;
+    /* height: 100vh; */
+    background-color: var(--green);
+}
+
+.social-container .vertical-section-name {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50px;
+    left: -40px;
+}
+
+.social-container .vertical-dash {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: var(--offWhite);
+    height: 1.25px;
+    width: 30px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.social-container .horizontal-dash {
+    transform: translate(-30px, 5px);
+    display: inline-block;
+    background: var(--offWhite);
+    height: 1.25px;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.social-container .vertical-section-name .project-section-name {
+    transform: translate(30px, 15px);
+    color: var(--offWhite);
+}
+
+.social-box {
+    display: flex;
+}
+
+.social-container .social-links {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--offWhite);
+    display: flex;
+}
+
+.social-links p {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.link-name {
+    transition: all .3s ease-in-out;
+}
+
+.social-links .link-name:hover {
+    color: var(--orange);
+}
+
+.social-links img {
+    height: 30px;
+    width: 30px;
+}
+
+.triangle {
+    background: var(--offWhite);
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 770px 70px 749px;
+    border-color: transparent transparent var(--green) transparent;
+}
+
+.footer {
+    position: relative;
+    background: var(--grey);
+    color: var(--offWhite);
 }
 
 /**********************************************
