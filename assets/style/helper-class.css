@@ -38,8 +38,8 @@
 }
 
 .container {
-    padding-left: 180px !important;
-    padding-right: 180px !important;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
 /**************************************************************************************************************************
@@ -68,23 +68,23 @@
 **************************************************************************************************************************/
 
 .content-box-x-lg {
-    padding: 240px 0 !important;
+    padding: 240px 0;
 }
 
 .content-box-lg {
-    padding: 160px 0 !important;
+    padding: 160px 0;
 }
 
 .content-box-md {
-    padding: 80px 0 !important;
+    padding: 80px 0;
 }
 
 .content-box-sm {
-    padding: 40px 0 !important;
+    padding: 40px 0;
 }
 
 .content-box-x-sm {
-    padding: 20px 0 !important;
+    padding: 20px 0;
 }
 
 /**************************************************************************************************************************

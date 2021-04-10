@@ -9,12 +9,13 @@
 
 body {
     font-family: 'montserrat', 'sans-serif';
+    overflow-x: hidden;
 }
 
 :root {
     --orange: #d66053;
     --green: #42a07f;
-    --grey: #596782;
+    --grey: #7384a5;
     --offWhite: #FEFEFE;
 }
 
@@ -107,7 +108,7 @@ body {
 }
 
 .home-container {
-    position: fixed;
+    position: relative;
     display: flex;
     height: 100vh;
     width: 100%;
@@ -156,7 +157,7 @@ body {
     border-radius: 50px;
 }
 .home-container .social-links a{
-    padding: 0 7px;
+    padding: 0 10px;
     color: var(--grey);
     font-size: 20px;
     transition: all .3s ease-in-out;
@@ -180,10 +181,10 @@ body {
 .blob-image-container {
     height: 120px;
     width: 120px;
-    overflow: hidden;
 }
 
 .empty-blob-image-container {
+    display: block;
     height: 120px;
     width: 120px;
 }
@@ -487,6 +488,7 @@ body {
     height: 100vh;
     position: relative;
     background-color: var(--offWhite);
+    overflow: hidden;
 }
 
 .about-container .content-container {
@@ -854,6 +856,7 @@ body {
     position: relative;
     height: 100vh;
     background-color: var(--offWhite);
+    overflow-x: hidden;
 }
 
 .contact-container .vertical-section-name {
@@ -934,6 +937,7 @@ body {
 .form-contact-details textarea::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    opacity: 0.6;
 }
 
 .form-contact-details input:focus {
@@ -1000,7 +1004,7 @@ body {
 }
 
 /*******************************************************************************
-                                CONTACT CSS
+                                SOCIAL CSS
 *******************************************************************************/
 
 .social-container {
@@ -1043,6 +1047,7 @@ body {
 
 .social-box {
     display: flex;
+    justify-content: center;
 }
 
 .social-container .social-links {
@@ -1076,6 +1081,7 @@ body {
 }
 
 .triangle {
+    overflow-x: hidden;
     background: var(--offWhite);
     position: relative;
     width: 0;
