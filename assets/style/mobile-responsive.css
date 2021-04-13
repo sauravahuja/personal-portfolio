@@ -1,3 +1,285 @@
+@media screen and (max-width:768px) {
+
+    /*Screens such as: 
+    tab
+    */
+    /*768 or less than 768*/
+    /*************************************************
+        GENERAL SECTION
+    *************************************************/
+    .container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .content-box-md {
+        padding: 40px 0;
+    }
+
+    .vertical-section-name {
+        display: block;
+    }
+
+    .row {
+        width: fit-content;
+    }
+
+    /*************************************************
+        HOME SECTION
+    *************************************************/
+
+    .home-container {
+        display: block;
+        position: relative;
+        z-index: 0;
+    }
+
+    .home-container .content-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        width: auto;
+    }
+
+    .home-container .overlay {
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 2;
+    }
+
+    .home-container .content-left {
+        position: inherit;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+    }
+
+    .home-container .logo {
+        padding: 20px 5%;
+    }
+
+    .blob-image-container {
+        display: block;
+        height: 120px;
+        width: 120px;
+    }
+
+    .empty-blob-image-container {
+        display: block;
+        height: 120px;
+        width: 120px !important;
+    }
+
+    .mobile-view-none {
+        display: block;
+    }
+
+    .blob-image-container {
+        width: unset;
+    }
+
+    .greeting {
+        font-size: 24px;
+    }
+
+    .name {
+        margin-top: 10px;
+        font-size: 32px;
+    }
+
+    .proffession {
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+    .home-container .highlighted-grey {
+        color: #fefefe;
+    }
+
+    .home-container .details {
+        padding-top: 40%;
+        padding-left: 5%;
+    }
+
+    .home-container .social-links a {
+        color: #fefefe;
+        font-size: 16px;
+    }
+
+    .home-container .social-links {
+        background: rgba(66, 160, 127, 0.3);
+    }
+
+    /*************************************************
+        ABOUT SECTION
+    *************************************************/
+
+    .about-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .about-container .content-container {
+        display: block;
+    }
+
+    .about-container .content-left {
+        width: 100%;
+    }
+
+    .about-container .content-right {
+        width: 100%;
+        height: 55vh;
+        display: none;
+    }
+
+    .about-container .content-right .image-container {
+        left: -5%;
+    }
+
+    /*************************************************
+        SKILLS SECTION
+    *************************************************/
+    .skill-container {
+        height: auto;
+    }
+
+    .skills-content {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .languages,
+    .designing-skills,
+    .soft-skills {
+        width: 400px;
+        height: auto;
+        margin: 20px 10px;
+    }
+
+    /*************************************************
+        PEOJECT SECTION
+    *************************************************/
+    .project-container .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .project-row {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .project-box {
+        width: 500px;
+        height: 500px;
+    }
+
+    .project-type {
+        transform: rotate(-90deg) translate(600px, 220px);
+        transition: all .3s ease-in-out;
+    }
+
+    .project-box img {
+        height: auto;
+    }
+
+    /*************************************************
+        REVIEW SECTION
+    *************************************************/
+    .testimonial-container {
+        height: auto;
+    }
+
+    .review-box {
+        padding: unset;
+    }
+
+    /*************************************************
+        REVIEW SECTION
+    *************************************************/
+    #review-slick .slick-next,
+    #review-slick .slick-prev {
+        display: none !important;
+    }
+
+    /*************************************************
+        CONTACT SECTION
+    *************************************************/
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-box {
+        display: block;
+    }
+
+    .location-contact-details,
+    .form-contact-details {
+        width: auto;
+        padding: 20px;
+        margin: 10px;
+        border-radius: unset;
+    }
+
+    .location-contact-details {
+        display: none;
+    }
+
+    /*************************************************
+        SOCIAL SECTION
+    *************************************************/
+
+    .social-container .social-links {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .social-container {
+        height: 20vh;
+    }
+
+    .social-container .container {
+        padding: 0;
+    }
+    .social-box{
+        margin-top: 25px;
+    }
+    .social-links p {
+        padding-left: 5px;
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    .social-links img {
+        height: 22px;
+        width: 22px;
+        margin-top: 2px;
+    }
+
+    .triangle {
+        background: var(--offWhite);
+        position: relative;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 240px 50px 240px;
+        border-color: transparent transparent var(--green) transparent;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+
+}
+
 @media screen and (max-width:500px) {
 
     /*Screens such as: 
@@ -247,7 +529,8 @@
         border-width: 0 240px 50px 240px;
         border-color: transparent transparent var(--green) transparent;
     }
-    .footer{
+
+    .footer {
         font-size: 14px;
     }
 
@@ -547,14 +830,13 @@
         height: 20px;
         width: 20px;
     }
-    
-    .footer{
+
+    .footer {
         font-size: 12px;
     }
 
 }
 
-@media screen and (min-width:768px) {}
 
 
 @media screen and (min-width:992px) {}
