@@ -1385,12 +1385,12 @@
     }
 
     .project-type {
-        transform: rotate(-90deg) translate(480px, 180px);
+        transform: rotate(-90deg) translate(390px, 160px);
         transition: all .3s ease-in-out;
     }
 
     .project-box:hover .hover-content {
-        transform: translateY(-80px);
+        transform: translateY(-60px);
     }
 
     /*************************************************
