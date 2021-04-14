@@ -860,7 +860,7 @@ body {
     position: relative;
     height: 100vh;
     background-color: var(--offWhite);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .contact-container .vertical-section-name {
