@@ -16,7 +16,7 @@ body {
     --orange: #d66053;
     --green: #42a07f;
     /* --grey: #7384a5; */
-    --grey: #096199;
+    --grey: #1276b6;
     --offWhite: #FEFEFE;
 }
 
@@ -1111,7 +1111,7 @@ body {
 }
 
 /**********************************************
-            TYPER CUSTOMIZATION
+            SLICK CUSTOMIZATION
 **********************************************/
 
 .slick-prev:before,
@@ -1133,12 +1133,12 @@ body {
 
 #review-slick .slick-next {
     position: absolute;
-    top: 250px;
-    left: 50%;
+    top: 260px;
+    right: 44%;
 }
 
 #review-slick .slick-prev {
     position: absolute;
-    top: 250px;
-    left: 44%;
+    top: 260px;
+    left: 45%;
 }

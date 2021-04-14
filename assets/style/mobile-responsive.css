@@ -831,13 +831,13 @@
 
     #review-slick .slick-prev {
         left: 38.5%;
-        top: 260px;
+        top: 280px;
     }
 
     #review-slick .slick-next {
         left: unset;
         right: 41%;
-        top: 260px;
+        top: 280px;
     }
 
     /*************************************************
