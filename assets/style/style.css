@@ -15,7 +15,8 @@ body {
 :root {
     --orange: #d66053;
     --green: #42a07f;
-    --grey: #7384a5;
+    /* --grey: #7384a5; */
+    --grey: #096199;
     --offWhite: #FEFEFE;
 }
 
