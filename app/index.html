@@ -42,13 +42,29 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/style/helper-class.css">
+    <link rel="stylesheet" href="../assets/style/navbar.css">
     <link rel="stylesheet" href="../assets/style/mobile-responsive.css">
-
-
-
+    
 </head>
 
 <body>
+    <section id="navbar">
+        <div class="nav-icon closed" id="nav-btn">
+            <span class="s-dash" id="first"></span>
+            <span class="s-dash" id="second"></span>
+            <span class="s-dash" id="last"></span>
+        </div>
+        <div id="navigation-panel">
+            <div class="navigation-wrapper">
+                <a href="#home"><h1 class="text-navbar" onclick="closeNav()">HOME</h1></a>
+                <a href="#about"><h1 class="text-navbar" onclick="closeNav()">ABOUT</h1></a>
+                <a href="#skills"><h1 class="text-navbar" onclick="closeNav()">SKILLS</h1></a>
+                <a href="#project"><h1 class="text-navbar" onclick="closeNav()">PROJECT</h1></a>
+                <a href="#testimonials"><h1 class="text-navbar" onclick="closeNav()">TESTIMONIAL</h1></a>
+                <a href="#contact"><h1 class="text-navbar" onclick="closeNav()">CONTACT</h1></a>
+            </div>
+        </div>
+    </section>
     <section id="home" class="home-container">
         <div class="content-left">
             <div class="logo">

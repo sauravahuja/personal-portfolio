@@ -18,7 +18,7 @@
         content="Portfolio, UI, UX, Mobile App, Web Design, Web Development, Responsive website, Creative website, Video, Creative Content, Engineering, IT, Skills, Project,">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.png">
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon.png"> -->
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,210 +35,138 @@
     <link rel="stylesheet" href="../assets/style/animate.css/animate.min.css">
 
     <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="../assets/style/helper-class.css"> -->
     <link rel="stylesheet" href="../assets/style/style.css">
     <style>
-        div {
-            background-color: RED;
-            /* padding: 100px; */
-            /* margin: 10px; */
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        img {
-            height: 300px;
+        body {
+            background: #ccc;
+        }
+
+        .s-dash {
+            display: block;
+            padding: 1.15px 17px;
+            background: var(--offWhite);
+            height: 1px;
+            margin: 10.1px;
+            border-radius: 10px;
+        }
+
+        .nav-icon {
+            display: inline-block;
+            background: var(--orange);
+            border-radius: 50%;
+            padding: 15px 12px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        #navigation-panel {
+            background: var(--orange);
+            color: var(--offWhite);
+            height: 0vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 38px;
+            padding: 20px;
+            transition: all .3s ease-in;
+        }
+        h1:before{
+            content: '';
+            padding: 30px 10px;
+            margin-right: 15px;
+            background: #35da7a;
+            display: inline-block;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all .3s ease-in;
+        }
+        h1:hover{
+            color: #35da7a;
+        }
+        h1:hover:before{
+            display: inline-block;
+            transform: translate(390px, 15px);
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
-
-    <span id="typer">
-    </span>
-
-    <section class="responsive animate__animated animate__zoomIn">
-        <div>
-            This is div - 1
+    <div class="nav-icon closed" id="nav-btn">
+        <span class="s-dash" id="first"></span>
+        <span class="s-dash" id="second"></span>
+        <span class="s-dash" id="last"></span>
+    </div>
+    <div id="navigation-panel">
+        <div class="navigation-wrapper">
+            <h1>HOME</h1>
+            <h1>ABOUT</h1>
+            <h1>SKILLS</h1>
+            <h1>PROJECT</h1>
+            <h1>TESTIMONIAL</h1>
+            <h1>FOOTER</h1>
         </div>
+    </div>
+    <script>
+        const navBtn = document.getElementById('nav-btn');
+        const navPanel = document.getElementById('navigation-panel');
+        var first = document.getElementById('first');
+        var second = document.getElementById('second');
+        var last = document.getElementById('last');
 
-        <div>
-            This is div - 2
-        </div>
+        navBtn.addEventListener("click", navbarclicked);
 
-        <div>
-            This is div - 3
-        </div>
+        function navbarclicked() {
+            console.log("clicked")
+            if (navBtn.classList.contains('opened')) {
+                console.log("we have closed it for you");
+                second.style.visibility = "visible";
+                navPanel.style.transition = "all .3s ease-in-out";
+                navPanel.style.height = "0";
+                navPanel.style.borderBottomLeftRadius = "50%";
+                navPanel.style.borderBottomRightRadius = "50%";
 
-        <div>
-            This is div - 4
-        </div>
-    </section>
+                navBtn.classList.remove("opened");
+                navBtn.classList.add("closed");
 
-    <section id="portfolio">
-        <div class="content-box-lg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="vertical-heading m-b-30">
-                            <h5>Find our work</h5>
-                            <h2>Our <br>Amazing<span class="highlight-heading">Work</span> Team</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div id="isotope-filters" class="m-b-30">
-                            <button class="btn active" data-filter="*"><span>ALL</span></button>
-                            <button class="btn" data-filter=".logo"><span>LOGO</span></button>
-                            <button class="btn" data-filter=".web"><span>WEB</span></button>
-                            <button class="btn" data-filter=".mobile"><span>MOBILE</span></button>
-                            <button class="btn" data-filter=".desktop"><span>DESKTOP</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section id="portfolio-wrapper">
-                <div class="container-fluid">
-                    <div class="row no-gutter">
-                        <div id="isotope-container">
+                first.style.transform = "unset"
 
-                            <div class="col-md-3 logo">
-                                <!--portfolio item-1-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-1-->
-                            </div>
+                last.style.transform = "unset"
 
-                            <div class="col-md-3 logo desktop">
-                                <!--portfolio item-2-->
-                                <div class="portfolio-item">
-                                    <a href=".../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-2-->
-                            </div>
+                first.style.transition = "all .3s ease-in-out";
 
-                            <div class="col-md-3 web mobile">
-                                <!--portfolio item-3-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-3-->
-                            </div>
+                last.style.transition = "all .3s ease-in-out";
+            } else if (navBtn.classList.contains('closed')) {
+                console.log("we have opened it for you");
+                second.style.visibility = "hidden";
+                navPanel.style.transition = "all .3s ease-in-out";
+                navPanel.style.height = "100vh";
 
-                            <div class="col-md-3 logo web">
-                                <!--portfolio item-4-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-4-->
-                            </div>
+                navPanel.style.borderBottomLeftRadius = "0px";
+                navPanel.style.borderBottomRightRadius = "0px";
 
-                            <div class="col-md-3 mobile desktop">
-                                <!--portfolio item-5-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-5-->
-                            </div>
+                navBtn.classList.remove("closed");
+                navBtn.classList.add("opened");
 
-                            <div class="col-md-3 desktop">
-                                <!--portfolio item-6-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-6-->
-                            </div>
+                first.style.transform = "rotate(45deg) translate(10px,10px)"
 
-                            <div class="col-md-3 mobile">
-                                <!--portfolio item-7-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpgg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-7-->
-                            </div>
+                last.style.transform = "rotate(-45deg) translate(7px,-8px)"
 
-                            <div class="col-md-3 desktop">
-                                <!--portfolio item-8-->
-                                <div class="portfolio-item">
-                                    <a href="../assets/images/7.jpg">
-                                        <img src="../assets/images/7.jpg" alt="" class="img-responsive">
-                                        <div class="portfolio-item-overlay">
-                                            <div class="portfolio-overlay-details text-center">
-                                                <h3>LOGO</h3>
-                                                <span></span>
-                                                <p>Desktop, Design</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/portfolio item-8-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
+                first.style.transition = "all .3s ease-in-out";
+
+                last.style.transition = "all .3s ease-in-out";
+            }
+        }
+    </script>
 
     <!-- JQuery -->
     <script src="../assets/script/jquery/jquery.min.js"></script>
@@ -256,90 +184,90 @@
     <script src="../assets/script/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="../assets/script/script.js"></script>
+    <!-- <script src="../assets/script/script.js"></script> -->
 
     <script>
-        var typed = new Typed("#typer", {
-            strings: ['Skills', 'Passionate Engineer', 'Web Developer', 'Web Designer', 'UI/UX Designer',
-                'Graphic Designer', 'Full Stack Dev'
-            ],
-            typeSpeed: 120,
-            backSpeed: 40,
-            backDelay: 500,
-            startDelay: 500,
-            smartBackspace: true,
-            loop: true
-        });
+        // var typed = new Typed("#typer", {
+        //     strings: ['Skills', 'Passionate Engineer', 'Web Developer', 'Web Designer', 'UI/UX Designer',
+        //         'Graphic Designer', 'Full Stack Dev'
+        //     ],
+        //     typeSpeed: 120,
+        //     backSpeed: 40,
+        //     backDelay: 500,
+        //     startDelay: 500,
+        //     smartBackspace: true,
+        //     loop: true
+        // });
     </script>
 
     <script>
-        $('.responsive').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            autoplay: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            edgeFriction: 0.50,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    // 600 or less than 600
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        })
+        // $('.responsive').slick({
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 300,
+        //     autoplay: true,
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        //     edgeFriction: 0.50,
+        //     responsive: [{
+        //             breakpoint: 1024,
+        //             settings: {
+        //                 slidesToShow: 3,
+        //                 slidesToScroll: 3,
+        //                 infinite: true,
+        //                 dots: true
+        //             }
+        //         },
+        //         {
+        //             breakpoint: 600,
+        //             // 600 or less than 600
+        //             settings: {
+        //                 slidesToShow: 2,
+        //                 slidesToScroll: 2
+        //             }
+        //         }
+        //         // You can unslick at a given breakpoint now by adding:
+        //         // settings: "unslick"
+        //         // instead of a settings object
+        //     ]
+        // })
     </script>
     <script>
-        $(document).ready(function () {
-            $("#isotope-container").isotope({});
+        // $(document).ready(function () {
+        //     $("#isotope-container").isotope({});
 
-            $("#isotope-filters").on("click", "button", function () {
-                let filtervalue = $(this).attr("data-filter");
-                //        console.log(filtervalue);
+        //     $("#isotope-filters").on("click", "button", function () {
+        //         let filtervalue = $(this).attr("data-filter");
+        //         //        console.log(filtervalue);
 
-                $("#isotope-container").isotope({
-                    filter: filtervalue
-                });
-                $("#isotope-filters").find('.active').removeClass('active');
+        //         $("#isotope-container").isotope({
+        //             filter: filtervalue
+        //         });
+        //         $("#isotope-filters").find('.active').removeClass('active');
 
-                $(this).addClass('active');
-            })
-        })
+        //         $(this).addClass('active');
+        //     })
+        // })
 
 
-        $(document).ready(function () {
-            $("#portfolio-wrapper").magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                zoom: {
-                    enabled: true,
-                    duration: 300,
-                    easing: 'ease-in-out',
-                    opener: function (openerElement) {
-                        return openerElement.is('img') ? openerElement : openerElement
-                            .find('img');
-                    }
-                }
-            })
-        });
+        // $(document).ready(function () {
+        //     $("#portfolio-wrapper").magnificPopup({
+        //         delegate: 'a',
+        //         type: 'image',
+        //         gallery: {
+        //             enabled: true
+        //         },
+        //         zoom: {
+        //             enabled: true,
+        //             duration: 300,
+        //             easing: 'ease-in-out',
+        //             opener: function (openerElement) {
+        //                 return openerElement.is('img') ? openerElement : openerElement
+        //                     .find('img');
+        //             }
+        //         }
+        //     })
+        // });
     </script>
 </body>
 
