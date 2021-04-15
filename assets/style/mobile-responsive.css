@@ -1392,6 +1392,9 @@
     .project-box:hover .hover-content {
         transform: translateY(-60px);
     }
+    .project-box img{
+        height: -webkit-fill-available;
+    }
 
     /*************************************************
         REVIEW SECTION
