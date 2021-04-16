@@ -1,3 +1,8 @@
+$(window).on('load',function(){
+    $("#loader").delay(2000).fadeOut('slow');
+    console.log("inside loader");
+});
+
 var typed = new Typed("#typer", {
     strings: ['Passionate Engineer', 'Web Developer', 'Web Designer', 'UI/UX Designer',
         'Graphic Designer', 'Full Stack Dev'
@@ -90,7 +95,7 @@ function navbarclicked() {
         navPanel.style.bottom = "0";
         navPanel.style.left = "0";
         navPanel.style.right = "0";
-        navPanel.style.zIndex = "999";
+        navPanel.style.zIndex = "99";
 
         navPanel.style.borderBottomLeftRadius = "0px";
         navPanel.style.borderBottomRightRadius = "0px";

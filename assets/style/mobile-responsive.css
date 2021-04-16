@@ -26,8 +26,8 @@
 
     .text-navbar {
         text-align: center;
-        font-size: 36px;
-        padding: 20px;
+        font-size: 34px;
+        padding: 10px;
         transition: all .3s ease-in-out;
     }
 
