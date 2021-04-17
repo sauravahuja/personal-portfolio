@@ -1,5 +1,6 @@
 $(window).on('load',function(){
     $("#loader").delay(2000).fadeOut('slow');
+    clearInput();
     console.log("inside loader");
 });
 
@@ -134,3 +135,17 @@ function closeNav(){
         last.style.transition = "all .3s ease-in-out";
     }
 }
+
+
+function clearInput(){
+    var  name = document.getElementById('name').value="";
+    var message = document.getElementById('message').value="";
+    var email = document.getElementById('email').value="";
+}
+
+const currentyear = document.getElementById("currentyear");
+var date = new Date();
+var year = date.getFullYear();
+var fullYearText = "@" + year;
+
+currentyear.innerHTML = fullYearText;
